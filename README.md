@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Verse Engine by Ctruh — frontend
 
-## Getting Started
-
-First, run the development server:
+Marketing site + Studio web app, built from `../verse-engine-handoff/build_prompt.md`.
+**Frontend only, with dummy data.** No backend, auth or real API calls.
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev      # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Next.js 16 (App Router) · TypeScript · plain CSS with design tokens (`app/globals.css`) · GSAP ScrollTrigger + Lenis ·
+Archivo / Instrument Serif / JetBrains Mono via `next/font`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Routes
+`/` · `/plugins` · `/plugins/[blender|unity|unreal]` · `/developers` · `/docs/[slug]` (`/docs` redirects) · `/explore` · `/pricing` (`#enterprise`) · `/about` · `/signin` ·
+`/studio` · `/studio/analytics?scene=sc-…` · `/studio/webhooks` · `/studio/keys` · `/studio/new` → `/studio/new/review` → `/studio/new/share`
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Where things live
+- `lib/data.ts` — all marketing copy/data constants. `lib/api/mock.ts` — Studio sample data + typed shapes (`lib/api/types.ts`); swap for real fetches later.
+- `lib/links.ts` — every external / placeholder URL and the route table.
+- `components/landing/*` — the 8 chapters + prologue/epilogue. `components/ui/*` — Odometer, Marquee, TiltCard, Tabs, Accordion, CopyButton, BarChart, StatusPill.
+- `components/pages/*`, `components/studio/*` — page views.
 
-## Learn More
+## Themes
+Dark default; light via `data-theme="light"` on `<html>` (toggle in the footer / Studio sidebar, persisted, respects `prefers-color-scheme`).
+`.force-dark` pins always-dark surfaces (film, device frames, viewer panes); `.band` is a saturated cobalt band.
 
-To learn more about Next.js, take a look at the following resources:
+## Placeholders still open (also marked `[PLACEHOLDER]` in the UI/code)
+Hero film · Studio + viewer recordings · library thumbnails · challenge/template/plug-in/API/SDK URLs (`lib/links.ts`) · auth provider (sign-in currently just continues to Studio) ·
+Docs content (MDX) · Explore posts (CMS) · founding story/team photo · claims and numbers to confirm (see the build prompt §10).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Known design/AA conflict
+White text on the brand blue `#0077FF` is 4.14:1 (AA needs 4.5:1 for small text). The design source uses exactly that pairing, so it is kept.
+If AA is a hard gate, set `--cta-text: #070b1f` in `app/globals.css` (4.7:1) — one variable changes every blue fill.
