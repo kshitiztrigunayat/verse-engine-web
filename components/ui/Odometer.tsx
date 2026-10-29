@@ -1,7 +1,7 @@
 "use client";
 export function Odometer({ value, unit, rolled, index }: { value: string; unit: string; rolled: boolean; index: number }) {
   return (
-    <div className="wide" role="img" aria-label={`${value}${unit}`} style={{ fontWeight: 300, fontSize: "clamp(64px, 7vw, 96px)", lineHeight: 1, display: "flex", alignItems: "flex-start" }}>
+    <div className="wide" role="img" aria-label={`${value}${unit}`} style={{ fontWeight: 700, fontSize: "clamp(64px, 7vw, 96px)", lineHeight: 1, display: "flex", alignItems: "flex-start" }}>
       {value.split("").map((ch, j) => {
         const digit = ch >= "0" && ch <= "9";
         if (!digit) return <span key={j} aria-hidden="true">.</span>;
@@ -14,7 +14,7 @@ export function Odometer({ value, unit, rolled, index }: { value: string; unit: 
           </span>
         );
       })}
-      <span aria-hidden="true" style={{ color: "var(--accent)", fontWeight: 500 }}>{unit}</span>
+      <span aria-hidden="true" style={{ color: "var(--accent)", fontWeight: 600 }}>{unit}</span>
     </div>
   );
 }

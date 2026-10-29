@@ -51,7 +51,7 @@ export function KeysView() {
 
       <section aria-labelledby="keys" style={{ marginTop: 56 }}>
         <div className="row-between" style={{ alignItems: "center", marginBottom: 20 }}>
-          <div><h2 id="keys" className="wide" style={{ fontWeight: 500, fontSize: 26 }}>API KEYS</h2><span style={{ color: "var(--body)" }}>Use these with the REST API, the SDK and plug-in sign-in.</span></div>
+          <div><h2 id="keys" className="wide" style={{ fontWeight: 600, fontSize: 26 }}>API KEYS</h2><span style={{ color: "var(--body)" }}>Use these with the REST API, the SDK and plug-in sign-in.</span></div>
           <button type="button" className="cta cta-blue" onClick={create}>+ Create key</button>
         </div>
         {fresh && (

@@ -9,7 +9,7 @@ import { Tabs } from "@/components/ui/Tabs";
 import { DAILY, SCENES, SESSIONS, fmt, hrs } from "@/lib/api/mock";
 import { ROUTES } from "@/lib/links";
 
-const DEVICES = [["Phone", 58, "#0077FF"], ["Desktop", 34, "#E8F1FF"], ["Headset", 8, "#FFFFFF"]] as const;
+const DEVICES = [["Phone", 58, "#0077FF"], ["Desktop", 34, "#FFFFFF"], ["Headset", 8, "#FFFFFF"]] as const;
 
 export function AnalyticsView({ initial }: { initial?: string }) {
   const router = useRouter();
@@ -45,7 +45,7 @@ export function AnalyticsView({ initial }: { initial?: string }) {
       ) : (
         <div key={`${id}-${range}`} style={{ marginTop: 24, display: "flex", flexDirection: "column", gap: 20 }}>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 14 }}>
-            {[["Number of views", fmt(Math.round(s.views * k))], ["Unique sessions", fmt(Math.round(s.sessions * k))], ["Watch time", hrs(Math.round(s.watch * k))]].map(([l, v]) => <div key={l} className="kpi fadeup"><span style={{ color: "var(--body)" }}>{l}</span><span className="wide" style={{ fontSize: 34, fontWeight: 300 }}>{v}</span><span className="mono" style={{ fontSize: 10, letterSpacing: "0.12em", color: "var(--muted)" }}>LAST {range} DAYS</span></div>)}
+            {[["Number of views", fmt(Math.round(s.views * k))], ["Unique sessions", fmt(Math.round(s.sessions * k))], ["Watch time", hrs(Math.round(s.watch * k))]].map(([l, v]) => <div key={l} className="kpi fadeup"><span style={{ color: "var(--body)" }}>{l}</span><span className="wide" style={{ fontSize: 34, fontWeight: 700 }}>{v}</span><span className="mono" style={{ fontSize: 10, letterSpacing: "0.12em", color: "var(--muted)" }}>LAST {range} DAYS</span></div>)}
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 340px), 1fr))", gap: 20 }}>
             <div className="panel"><span style={{ fontWeight: 600, display: "block", marginBottom: 20 }}>Views per day</span><BarChart data={bars} label="Views per day for this scene" /></div>

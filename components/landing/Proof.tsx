@@ -22,7 +22,7 @@ export function Proof() {
         {rolled && (
           <>
             <h2 className="wide h-light" style={{ marginTop: 40, fontSize: "clamp(56px, 9vw, 132px)", letterSpacing: "-0.03em" }}>
-              <span className="word" style={{ animationDelay: ".05s" }}>WHAT</span><span className="word" style={{ animationDelay: ".15s" }}>CAN</span><span className="word" style={{ animationDelay: ".25s", fontWeight: 600 }}>WE</span><span className="word serif" style={{ animationDelay: ".4s", fontStretch: "100%", color: "var(--accent)", fontSize: "1.08em" }}>DO?</span>
+              <span className="word" style={{ animationDelay: ".05s" }}>WHAT</span><span className="word" style={{ animationDelay: ".15s" }}>CAN</span><span className="word" style={{ animationDelay: ".25s", fontWeight: 800 }}>WE</span><span className="word serif" style={{ animationDelay: ".4s", fontStretch: "100%", color: "var(--accent)", fontSize: "1.08em" }}>DO?</span>
             </h2>
             <p className="fadeup" style={{ marginTop: 28, fontSize: 20, maxWidth: 560, color: "var(--body)", animationDelay: ".6s" }}>Heavy used to mean slow. So we stopped shrinking files and built an engine that streams the big ones — straight into an ordinary browser tab.</p>
           </>

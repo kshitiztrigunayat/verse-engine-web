@@ -29,7 +29,7 @@ export function ScenesView() {
       <section aria-label="Global analytics" style={{ marginTop: 40 }}>
         <span className="mono eyebrow" style={{ color: "var(--muted)" }}>GLOBAL ANALYTICS · LAST 30 DAYS</span>
         <div style={{ marginTop: 16, display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: 14 }}>
-          {KPIS.map(([l, v], i) => <div key={l} className="kpi fadeup" style={{ animationDelay: `${i * 0.06}s` }}><span style={{ color: "var(--body)" }}>{l}</span><span className="wide" style={{ fontSize: 34, fontWeight: 300 }}>{v}</span></div>)}
+          {KPIS.map(([l, v], i) => <div key={l} className="kpi fadeup" style={{ animationDelay: `${i * 0.06}s` }}><span style={{ color: "var(--body)" }}>{l}</span><span className="wide" style={{ fontSize: 34, fontWeight: 700 }}>{v}</span></div>)}
         </div>
         <div className="panel" style={{ marginTop: 14 }}>
           <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 20, gap: 8, flexWrap: "wrap" }}><span style={{ fontWeight: 600 }}>Views across all scenes</span><span className="mono label" style={{ fontSize: 11, letterSpacing: "0.1em" }}>PEAK 310 TODAY</span></div>
@@ -49,10 +49,10 @@ export function ScenesView() {
               const ready = s.status === "Ready";
               return (
                 <article key={s.id} className="scard lift-card">
-                  <div className="force-dark" style={{ position: "relative", height: 170, background: i % 2 ? "#070B1F" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                  <div className="force-dark" style={{ position: "relative", height: 170, background: i % 2 ? "#001B99" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                     <Cube size="sm" />
                     <span style={{ position: "absolute", top: 14, left: 14 }}><StatusPill tone={ready ? "ready" : "processing"} pulse={!ready}>{s.status.toUpperCase()}</StatusPill></span>
-                    <span className="mono" style={{ position: "absolute", top: 14, right: 14, fontSize: 10, letterSpacing: "0.12em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(232,241,255,0.35)" }}>{s.source}</span>
+                    <span className="mono" style={{ position: "absolute", top: 14, right: 14, fontSize: 10, letterSpacing: "0.12em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.35)" }}>{s.source}</span>
                   </div>
                   <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
                     <div><div style={{ fontWeight: 600, fontSize: 18 }}>{s.name}</div><div className="mono" style={{ marginTop: 6, fontSize: 10, letterSpacing: "0.1em", color: "var(--muted)" }}>{`${fmt(s.views)} VIEWS · ${fmt(s.sessions)} SESSIONS · ${s.date}`.toUpperCase()}</div></div>

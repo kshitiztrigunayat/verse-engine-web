@@ -28,8 +28,8 @@ export function PricingView() {
             {PLANS.map((p, i) => (
               <article key={p.name} className={`plan fadeup${p.hot ? " band" : ""}`} style={{ position: "relative", display: "flex", flexDirection: "column", gap: 20, padding: 28, borderRadius: 28, border: `1px solid ${p.hot ? "var(--blue)" : "var(--hair)"}`, background: p.hot ? undefined : "var(--surface)", animationDelay: `${i * 0.07}s` }}>
                 {p.hot && <span className="mono" style={{ position: "absolute", top: -13, left: 24, padding: "5px 12px", borderRadius: 999, background: "var(--blue)", color: "#fff", fontSize: 10, letterSpacing: "0.14em" }}>MOST POPULAR</span>}
-                <div><h2 className="wide" style={{ fontWeight: 500, fontSize: 26, textTransform: "uppercase" }}>{p.name}</h2><span style={{ color: "var(--body)", fontSize: 15 }}>{p.who}</span></div>
-                <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}><span className="wide" style={{ fontWeight: 300, fontSize: 48, lineHeight: 1 }}>{p.price}</span><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "var(--muted)" }}>{p.per}</span></div>
+                <div><h2 className="wide" style={{ fontWeight: 600, fontSize: 26, textTransform: "uppercase" }}>{p.name}</h2><span style={{ color: "var(--body)", fontSize: 15 }}>{p.who}</span></div>
+                <div style={{ display: "flex", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}><span className="wide" style={{ fontWeight: 700, fontSize: 48, lineHeight: 1 }}>{p.price}</span><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "var(--muted)" }}>{p.per}</span></div>
                 <Link className={`cta ${p.hot ? "cta-white" : "cta-ghost"}`} href={p.href}>{p.cta}</Link>
                 <ul style={{ display: "flex", flexDirection: "column", gap: 10, fontSize: 15 }}>{p.items.map((t) => <li key={t} style={{ display: "flex", gap: 10 }}><span aria-hidden="true" style={{ color: p.hot ? "#fff" : "var(--label)" }}>✓</span>{t}</li>)}</ul>
               </article>
@@ -40,7 +40,7 @@ export function PricingView() {
       </section>
 
       <section id="enterprise" className="band" aria-labelledby="ent" style={{ position: "relative", padding: "100px 0", overflow: "hidden", scrollMarginTop: 70 }}>
-        <div aria-hidden="true" style={{ position: "absolute", right: -200, top: -200, width: 720, height: 720, borderRadius: "50%", border: "1px solid rgba(232,241,255,0.14)" }} />
+        <div aria-hidden="true" style={{ position: "absolute", right: -200, top: -200, width: 720, height: 720, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.14)" }} />
         <div className="wrap" style={{ position: "relative", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: 56, alignItems: "center" }}>
           <div>
             <span className="mono eyebrow">ENTERPRISE</span>
@@ -49,7 +49,7 @@ export function PricingView() {
           </div>
           <div style={{ minWidth: 0 }}>
             {!sent ? (
-              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 16, background: "rgba(7,11,31,0.55)", border: "1px solid rgba(232,241,255,0.2)", borderRadius: 28, padding: 28 }}>
+              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 16, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 28, padding: 28 }}>
                 <label className="fld" htmlFor="e1">NAME<input id="e1" className="inp" required autoComplete="name" /></label>
                 <label className="fld" htmlFor="e2">WORK EMAIL<input id="e2" className="inp" type="email" required autoComplete="email" /></label>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16 }}>
@@ -60,8 +60,8 @@ export function PricingView() {
                 <button className="cta cta-white cta-lg" type="submit">Request a call back</button>
               </form>
             ) : (
-              <div className="fadeup" role="status" style={{ display: "flex", flexDirection: "column", gap: 12, background: "rgba(7,11,31,0.55)", border: "1px solid rgba(232,241,255,0.2)", borderRadius: 28, padding: 36 }}>
-                <span className="mono eyebrow">REQUEST RECEIVED</span><span className="wide" style={{ fontSize: 34, fontWeight: 400 }}>WE’LL CALL YOU SHORTLY.</span><span style={{ color: "var(--body)" }}>Expect a call within 30 minutes during business hours (IST).</span>
+              <div className="fadeup" role="status" style={{ display: "flex", flexDirection: "column", gap: 12, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 28, padding: 36 }}>
+                <span className="mono eyebrow">REQUEST RECEIVED</span><span className="wide" style={{ fontSize: 34, fontWeight: 600 }}>WE’LL CALL YOU SHORTLY.</span><span style={{ color: "var(--body)" }}>Expect a call within 30 minutes during business hours (IST).</span>
               </div>
             )}
           </div>

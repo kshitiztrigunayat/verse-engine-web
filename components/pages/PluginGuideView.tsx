@@ -32,7 +32,7 @@ export function PluginGuideView({ editor }: { editor: EditorKey }) {
       <section style={{ padding: "40px 0 100px" }}>
         <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 420px), 1fr))", gap: 56, alignItems: "start" }}>
           <div style={{ gridColumn: "span 1" }}>
-            <h2 className="wide" style={{ fontWeight: 400, fontSize: "clamp(22px, 5.6vw, 34px)", textTransform: "uppercase", letterSpacing: "-0.01em" }}>Install in <span className="hl">4</span> steps</h2>
+            <h2 className="wide" style={{ fontWeight: 600, fontSize: "clamp(22px, 5.6vw, 34px)", textTransform: "uppercase", letterSpacing: "-0.01em" }}>Install in <span className="hl">4</span> steps</h2>
             <ol key={editor} style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 18 }}>
               {p.steps.map(([t, d, path], i) => (
                 <li key={t} className="fadeup" style={{ display: "flex", gap: 20, padding: 22, border: "1px solid var(--hair)", borderRadius: 24, background: "var(--surface)", animationDelay: `${i * 0.08}s` }}>
@@ -45,20 +45,20 @@ export function PluginGuideView({ editor }: { editor: EditorKey }) {
                 </li>
               ))}
             </ol>
-            <h2 className="wide" style={{ fontWeight: 400, fontSize: "clamp(22px, 5.6vw, 34px)", textTransform: "uppercase", letterSpacing: "-0.01em", marginTop: 64, marginBottom: 24 }}>Troubleshooting</h2>
+            <h2 className="wide" style={{ fontWeight: 600, fontSize: "clamp(22px, 5.6vw, 34px)", textTransform: "uppercase", letterSpacing: "-0.01em", marginTop: 64, marginBottom: 24 }}>Troubleshooting</h2>
             <Accordion items={PLUGIN_FAQ} />
           </div>
           <aside style={{ position: "sticky", top: 96, display: "flex", flexDirection: "column", gap: 20 }}>
-            <div className="force-dark" style={{ borderRadius: 24, overflow: "hidden", border: "1px solid rgba(232,241,255,0.2)", background: "#070B1F" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px", borderBottom: "1px solid rgba(232,241,255,0.12)" }}>
-                <span style={{ display: "flex", gap: 6 }} aria-hidden="true">{[0, 1, 2].map((k) => <span key={k} style={{ width: 9, height: 9, borderRadius: "50%", background: "rgba(232,241,255,0.3)" }} />)}</span>
+            <div className="force-dark" style={{ borderRadius: 24, overflow: "hidden", border: "1px solid rgba(255,255,255,0.2)", background: "#001B99" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: 10, padding: "12px 16px", borderBottom: "1px solid rgba(255,255,255,0.12)" }}>
+                <span style={{ display: "flex", gap: 6 }} aria-hidden="true">{[0, 1, 2].map((k) => <span key={k} style={{ width: 9, height: 9, borderRadius: "50%", background: "rgba(255,255,255,0.3)" }} />)}</span>
                 <span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em" }}>{p.editor}</span>
               </div>
               <div style={{ display: "flex", minHeight: 260 }} aria-hidden="true">
                 <div style={{ flex: 1, backgroundImage: "linear-gradient(rgba(0,119,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,119,255,0.1) 1px, transparent 1px)", backgroundSize: "28px 28px" }} />
-                <div style={{ width: 190, padding: 16, borderLeft: "1px solid rgba(232,241,255,0.12)", display: "flex", flexDirection: "column", gap: 10 }}>
+                <div style={{ width: 190, padding: 16, borderLeft: "1px solid rgba(255,255,255,0.12)", display: "flex", flexDirection: "column", gap: 10 }}>
                   <span className="mono" style={{ fontSize: 10, letterSpacing: "0.14em", color: "#0077FF" }}>VERSE ENGINE</span>
-                  <span style={{ height: 10, borderRadius: 6, background: "rgba(232,241,255,0.12)" }} /><span style={{ height: 10, width: "70%", borderRadius: 6, background: "rgba(232,241,255,0.12)" }} />
+                  <span style={{ height: 10, borderRadius: 6, background: "rgba(255,255,255,0.12)" }} /><span style={{ height: 10, width: "70%", borderRadius: 6, background: "rgba(255,255,255,0.12)" }} />
                   <span className="ringpulse" style={{ marginTop: "auto", padding: "12px 10px", borderRadius: 12, background: "#0077FF", fontSize: 13, fontWeight: 700, textAlign: "center" }}>Publish to Verse Engine</span>
                 </div>
               </div>

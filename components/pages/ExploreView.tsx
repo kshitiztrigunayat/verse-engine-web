@@ -30,14 +30,14 @@ export function ExploreView() {
         <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(min(100%, 380px), 1fr))", gap: 24 }}>
           {list.map((p, i) => (
             <article key={p.title} className="lift-card fadeup" style={{ border: "1px solid var(--hair)", borderRadius: 28, overflow: "hidden", background: "var(--surface)", animationDelay: `${i * 0.06}s`, display: "flex", flexDirection: "column" }}>
-              <div className="force-dark" style={{ position: "relative", height: 200, background: p.type === "Research" ? "#070B1F" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+              <div className="force-dark" style={{ position: "relative", height: 200, background: p.type === "Research" ? "#001B99" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                 {p.type === "Blog" && <Cube size="md" />}
                 {p.type === "Research" && <div aria-hidden="true" style={{ display: "flex", alignItems: "center", gap: 8, height: 70 }}>{Array.from({ length: 7 }, (_, k) => <span key={k} className="wave" />)}</div>}
                 {p.type === "Event" && <div aria-hidden="true"><span className="ringz" /><span className="ringz" /><span className="ringz" /></div>}
-                <span className="mono" style={{ position: "absolute", top: 16, left: 18, fontSize: 11, letterSpacing: "0.14em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(232,241,255,0.4)" }}>{p.type.toUpperCase()}</span>
+                <span className="mono" style={{ position: "absolute", top: 16, left: 18, fontSize: 11, letterSpacing: "0.14em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.4)" }}>{p.type.toUpperCase()}</span>
               </div>
               <div style={{ padding: 26, display: "flex", flexDirection: "column", gap: 14, flex: 1 }}>
-                <h2 className="wide" style={{ fontWeight: 500, fontSize: 24, lineHeight: 1.15, letterSpacing: "-0.01em", textTransform: "uppercase" }}>{p.title}</h2>
+                <h2 className="wide" style={{ fontWeight: 600, fontSize: 24, lineHeight: 1.15, letterSpacing: "-0.01em", textTransform: "uppercase" }}>{p.title}</h2>
                 <span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "var(--muted)" }}>{p.meta.toUpperCase()}</span>
                 <div style={{ marginTop: "auto", paddingTop: 8, display: "flex", justifyContent: "space-between", alignItems: "center", gap: 10 }}>
                   <a href="#" className="mono" style={{ fontSize: 12, letterSpacing: "0.1em", minHeight: 44, display: "inline-flex", alignItems: "center" }}>READ →</a>

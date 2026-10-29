@@ -45,7 +45,7 @@ export function AboutView() {
             <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 20 }}>
               {ABOUT_FACTS.map((f) => (
                 <div key={f.k} className="panel" style={{ display: "flex", flexDirection: "column", gap: 12 }}>
-                  <span className="mono label eyebrow">{f.k}</span><span className="wide" style={{ fontSize: 26, fontWeight: 500, overflowWrap: "anywhere" }}>{f.v}</span><span style={{ color: "var(--body)" }}>{f.d}</span>
+                  <span className="mono label eyebrow">{f.k}</span><span className="wide" style={{ fontSize: 26, fontWeight: 600, overflowWrap: "anywhere" }}>{f.v}</span><span style={{ color: "var(--body)" }}>{f.d}</span>
                 </div>
               ))}
             </div>
@@ -55,24 +55,24 @@ export function AboutView() {
         <>
           <section style={{ padding: "40px 0 80px" }}>
             <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 20 }}>
-              {ABOUT_PILLARS.map((p, i) => <div key={p.n} className="panel fadeup" style={{ display: "flex", flexDirection: "column", gap: 12, animationDelay: `${i * 0.08}s` }}><span className="mono label">{p.n}</span><span className="wide" style={{ fontSize: 24, fontWeight: 500, textTransform: "uppercase" }}>{p.t}</span><span style={{ color: "var(--body)" }}>{p.d}</span></div>)}
+              {ABOUT_PILLARS.map((p, i) => <div key={p.n} className="panel fadeup" style={{ display: "flex", flexDirection: "column", gap: 12, animationDelay: `${i * 0.08}s` }}><span className="mono label">{p.n}</span><span className="wide" style={{ fontSize: 24, fontWeight: 600, textTransform: "uppercase" }}>{p.t}</span><span style={{ color: "var(--body)" }}>{p.d}</span></div>)}
             </div>
           </section>
           <section className="band" aria-labelledby="cost" style={{ padding: "90px 0" }}>
             <div className="wrap" style={{ maxWidth: 960 }}>
-              <div className="row-between"><h2 id="cost" className="wide" style={{ fontWeight: 400, fontSize: "clamp(30px, 3.6vw, 48px)", textTransform: "uppercase" }}>STREAMING COST</h2><span className="mono eyebrow">PER THOUSAND VIEWER-HOURS</span></div>
+              <div className="row-between"><h2 id="cost" className="wide" style={{ fontWeight: 600, fontSize: "clamp(30px, 3.6vw, 48px)", textTransform: "uppercase" }}>STREAMING COST</h2><span className="mono eyebrow">PER THOUSAND VIEWER-HOURS</span></div>
               {/* confirm before launch */}
-              {[["Verse Engine", "ABOUT $252", 6, "#0077FF"], ["Cloud GPU streaming", "$498 – $6,000", 100, "#E8F1FF"]].map(([n, v, w, c]) => (
+              {[["Verse Engine", "ABOUT $252", 6, "#0077FF"], ["Cloud GPU streaming", "$498 – $6,000", 100, "#FFFFFF"]].map(([n, v, w, c]) => (
                 <div key={n as string} style={{ marginTop: 32 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10, gap: 12, flexWrap: "wrap" }}><span style={{ fontSize: 20, fontWeight: 600 }}>{n}</span><span className="mono">{v}</span></div>
-                  <div style={{ height: 14, borderRadius: 99, background: "rgba(232,241,255,0.14)", overflow: "hidden" }}><div className="grow" style={{ height: "100%", width: `${w}%`, background: c as string, borderRadius: 99 }} /></div>
+                  <div style={{ height: 14, borderRadius: 99, background: "rgba(255,255,255,0.14)", overflow: "hidden" }}><div className="grow" style={{ height: "100%", width: `${w}%`, background: c as string, borderRadius: 99 }} /></div>
                 </div>
               ))}
             </div>
           </section>
           <section style={{ padding: "90px 0 110px" }}>
             <div className="wrap" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 28 }}>
-              {ABOUT_STATS.map((s) => <div key={s.l}><div className="wide" style={{ fontWeight: 300, fontSize: "clamp(56px, 6vw, 88px)", lineHeight: 1 }}>{s.v}<span style={{ color: "var(--accent)", fontWeight: 500 }}>{s.u}</span></div><div className="mono" style={{ marginTop: 12, fontSize: 12, letterSpacing: "0.12em" }}>{s.l}</div></div>)}
+              {ABOUT_STATS.map((s) => <div key={s.l}><div className="wide" style={{ fontWeight: 700, fontSize: "clamp(56px, 6vw, 88px)", lineHeight: 1 }}>{s.v}<span style={{ color: "var(--accent)", fontWeight: 600 }}>{s.u}</span></div><div className="mono" style={{ marginTop: 12, fontSize: 12, letterSpacing: "0.12em" }}>{s.l}</div></div>)}
             </div>
           </section>
         </>

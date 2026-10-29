@@ -47,7 +47,7 @@ export function WebhooksView() {
 
       {form && (
         <form className="panel fadeup" onSubmit={create} style={{ marginTop: 28, display: "flex", flexDirection: "column", gap: 20 }}>
-          <span className="wide" style={{ fontSize: 18, fontWeight: 500 }}>CREATE A NEW WEBHOOK</span>
+          <span className="wide" style={{ fontSize: 18, fontWeight: 600 }}>CREATE A NEW WEBHOOK</span>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 16 }}>
             <label className="fld" htmlFor="h-name">NAME<input id="h-name" name="name" className="inp" required placeholder="e.g. CRM sync" /></label>
             <label className="fld" htmlFor="h-url">ENDPOINT URL<input id="h-url" name="url" className="inp" type="url" required placeholder="https://your-server.com/verse" /></label>
@@ -77,7 +77,7 @@ export function WebhooksView() {
         </section>
         <section className="panel" aria-label={`${cur.name} details`} style={{ display: "flex", flexDirection: "column", gap: 24, minWidth: 0 }}>
           <div className="row-between" style={{ alignItems: "flex-start" }}>
-            <div style={{ minWidth: 0 }}><h2 className="wide" style={{ fontWeight: 500, fontSize: 28, textTransform: "uppercase" }}>{cur.name}</h2><span className="mono" style={{ fontSize: 11, color: "var(--muted)", overflowWrap: "anywhere" }}>{cur.url} · {cur.events.join(", ")}</span></div>
+            <div style={{ minWidth: 0 }}><h2 className="wide" style={{ fontWeight: 600, fontSize: 28, textTransform: "uppercase" }}>{cur.name}</h2><span className="mono" style={{ fontSize: 11, color: "var(--muted)", overflowWrap: "anywhere" }}>{cur.url} · {cur.events.join(", ")}</span></div>
             <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
               <button type="button" className="cta cta-ghost cta-sm" onClick={() => setStatus(cur.status === "Paused" ? "Active" : "Paused")}>{cur.status === "Paused" ? "Resume" : "Pause"}</button>
               {!confirm ? <button type="button" className="cta cta-ghost cta-sm" onClick={() => setConfirm(true)}>Delete</button> : (
@@ -86,7 +86,7 @@ export function WebhooksView() {
             </div>
           </div>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: 12 }}>
-            {[["Number of views", cur.views.toLocaleString("en-IN")], ["Unique sessions", cur.sessions.toLocaleString("en-IN")], ["Watch time", cur.watch], ["Delivered OK", cur.ok]].map(([l, v]) => <div key={l}><span style={{ color: "var(--body)", fontSize: 14 }}>{l}</span><div className="wide" style={{ fontSize: 26, fontWeight: 300 }}>{v}</div></div>)}
+            {[["Number of views", cur.views.toLocaleString("en-IN")], ["Unique sessions", cur.sessions.toLocaleString("en-IN")], ["Watch time", cur.watch], ["Delivered OK", cur.ok]].map(([l, v]) => <div key={l}><span style={{ color: "var(--body)", fontSize: 14 }}>{l}</span><div className="wide" style={{ fontSize: 26, fontWeight: 700 }}>{v}</div></div>)}
           </div>
           <div><span style={{ fontWeight: 600, display: "block", marginBottom: 14 }}>Events delivered per day</span><BarChart data={WEBHOOK_DAILY.map((v) => (v * cur.views) / 4320)} max={290} height={120} label="Events delivered per day over the last 20 days" /></div>
           <div>

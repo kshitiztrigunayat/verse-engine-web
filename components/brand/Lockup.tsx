@@ -26,7 +26,7 @@ export function Lockup({ sub = "BY CTRUH", href = "/", compact = false }: { sub?
 export function Wordmark() {
   return (
     <svg viewBox="0 0 1300 150" width="100%" aria-hidden="true" focusable="false" style={{ display: "block", overflow: "visible" }}>
-      <text x="0" y="128" textLength="1300" lengthAdjust="spacingAndGlyphs" className="wide" style={{ fontFamily: "var(--font-archivo), Archivo, sans-serif", fontWeight: 600, fontSize: 150, fontStretch: "125%", fill: "var(--wordmark)" }}>VERSE ENGINE</text>
+      <text x="0" y="128" textLength="1300" lengthAdjust="spacingAndGlyphs" className="wide" style={{ fontFamily: "var(--font-sans)", fontWeight: 800, fontSize: 150, fill: "var(--wordmark)" }}>VERSE ENGINE</text>
     </svg>
   );
 }

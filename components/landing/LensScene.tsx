@@ -42,25 +42,25 @@ function Stage({ v, root, phase, onDot, trans }: { v: V; root?: React.Ref<HTMLDi
         <div className="mono" style={{ position: "absolute", left: "50%", top: "18%", transform: "translateX(-50%)", padding: "10px 18px", borderRadius: 999, background: "var(--surface-2)", border: "1px solid var(--grid)", fontSize: 14, whiteSpace: "nowrap" }}>verse.ctruh.com/v/warehouse-twin</div>
       </div>
 
-      <div data-l="text" className={`wide${t}`} role="img" aria-label="Heavy files. App installs. Crashes." style={{ position: "absolute", left: "clamp(16px,3.4vw,48px)", right: "clamp(16px,3.4vw,48px)", top: 124, fontWeight: 300, fontSize: "clamp(56px, 10.4vw, 150px)", lineHeight: 0.92, letterSpacing: "-0.03em", textTransform: "uppercase", ...textStyle(v) }}>
+      <div data-l="text" className={`wide${t}`} role="img" aria-label="Heavy files. App installs. Crashes." style={{ position: "absolute", left: "clamp(16px,3.4vw,48px)", right: "clamp(16px,3.4vw,48px)", top: 124, fontWeight: 700, fontSize: "clamp(56px, 10.4vw, 150px)", lineHeight: 0.92, letterSpacing: "-0.03em", textTransform: "uppercase", ...textStyle(v) }}>
         <div>Heavy files.</div>
-        <div style={{ fontWeight: 500 }}>App installs.</div>
+        <div style={{ fontWeight: 800 }}>App installs.</div>
         <div><span className="serif" style={{ fontStretch: "100%", textTransform: "none", color: "var(--accent)" }}>Crashes.</span></div>
       </div>
       <span className="mono label eyebrow" style={{ position: "absolute", left: "clamp(16px,3.4vw,48px)", top: 86 }}>CHAPTER 01 · THE WALL</span>
 
-      <div data-l="visor" className={t} aria-hidden="true" style={{ position: "absolute", left: "50%", top: "52%", width: 600, maxWidth: "92vw", ...visorStyle(v), filter: "drop-shadow(0 40px 60px rgba(7,11,31,0.6))" }}>
+      <div data-l="visor" className={t} aria-hidden="true" style={{ position: "absolute", left: "50%", top: "52%", width: 600, maxWidth: "92vw", ...visorStyle(v), filter: "drop-shadow(0 40px 60px rgba(0,27,153,0.6))" }}>
         <svg width="100%" viewBox="0 0 600 300">
           <defs>
-            <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#001B99" /><stop offset="1" stopColor="#070B1F" /></linearGradient>
+            <linearGradient id="visor" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stopColor="#0077FF" /><stop offset="1" stopColor="#001B99" /></linearGradient>
             <pattern id="lensgrid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0v18" fill="none" stroke="#0077FF" strokeOpacity="0.55" strokeWidth="1" /></pattern>
           </defs>
           <path d="M30 150c-28 0-28-40 0-40h20v40Z M570 150c28 0 28-40 0-40h-20v40Z" fill="#001B99" />
-          <rect x="40" y="50" width="520" height="210" rx="100" fill="url(#visor)" stroke="#E8F1FF" strokeOpacity="0.35" strokeWidth="2" />
-          {[185, 415].map((cx) => (<g key={cx}><ellipse cx={cx} cy="155" rx="105" ry="72" fill="#070B1F" /><ellipse cx={cx} cy="155" rx="105" ry="72" fill="url(#lensgrid)" stroke="#0077FF" strokeWidth="3" /></g>))}
-          <path d="M120 112c20-22 50-30 80-26" stroke="#E8F1FF" strokeOpacity="0.7" strokeWidth="5" strokeLinecap="round" fill="none" />
-          <path d="M350 112c20-22 50-30 80-26" stroke="#E8F1FF" strokeOpacity="0.7" strokeWidth="5" strokeLinecap="round" fill="none" />
-          <path d="M265 260c10-34 60-34 70 0" fill="#070B1F" />
+          <rect x="40" y="50" width="520" height="210" rx="100" fill="url(#visor)" stroke="#FFFFFF" strokeOpacity="0.35" strokeWidth="2" />
+          {[185, 415].map((cx) => (<g key={cx}><ellipse cx={cx} cy="155" rx="105" ry="72" fill="#001B99" /><ellipse cx={cx} cy="155" rx="105" ry="72" fill="url(#lensgrid)" stroke="#0077FF" strokeWidth="3" /></g>))}
+          <path d="M120 112c20-22 50-30 80-26" stroke="#FFFFFF" strokeOpacity="0.7" strokeWidth="5" strokeLinecap="round" fill="none" />
+          <path d="M350 112c20-22 50-30 80-26" stroke="#FFFFFF" strokeOpacity="0.7" strokeWidth="5" strokeLinecap="round" fill="none" />
+          <path d="M265 260c10-34 60-34 70 0" fill="#001B99" />
         </svg>
       </div>
 

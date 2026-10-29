@@ -24,7 +24,7 @@ export function useTheme() {
       return () => mo.disconnect();
     },
     () => (document.documentElement.getAttribute("data-theme") === "light" ? "light" : "dark"),
-    () => "dark" as const,
+    () => "light" as const,
   );
 }
 

@@ -41,7 +41,7 @@ export function UploadView() {
 
         <div className="dash">
           <span className="float ringpulse" style={{ width: 60, height: 60, borderRadius: "50%", background: "var(--blue)", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M6 10l6-6 6 6M4 20h16" /></svg></span>
-          <span className="wide" style={{ fontSize: 22, fontWeight: 500 }}>{plan ? "DROP YOUR FLOOR PLAN HERE" : "DROP YOUR 3D FILE OR SCAN HERE"}</span>
+          <span className="wide" style={{ fontSize: 22, fontWeight: 600 }}>{plan ? "DROP YOUR FLOOR PLAN HERE" : "DROP YOUR 3D FILE OR SCAN HERE"}</span>
           <span style={{ color: "var(--body)", maxWidth: 520 }}>{plan ? "PNG, JPG or PDF. We build a walkable, furnished home from it." : "Models, point clouds, splats and BIM. FBX, OBJ and ZIP are converted for you."}</span>
           {!file ? (
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", justifyContent: "center" }}>
@@ -58,7 +58,7 @@ export function UploadView() {
         </div>
 
         <section aria-labelledby="fmts" className="panel">
-          <div className="row-between" style={{ alignItems: "center", marginBottom: 16 }}><h2 id="fmts" className="wide" style={{ fontSize: 16, fontWeight: 500 }}>SUPPORTED FORMATS</h2><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "var(--muted)" }}>DASHED = CONVERTED ON OUR SIDE</span></div>
+          <div className="row-between" style={{ alignItems: "center", marginBottom: 16 }}><h2 id="fmts" className="wide" style={{ fontSize: 16, fontWeight: 600 }}>SUPPORTED FORMATS</h2><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "var(--muted)" }}>DASHED = CONVERTED ON OUR SIDE</span></div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {FORMATS.map((f) => { const conv = f.includes("*"); return <code key={f} className="mono" style={{ fontSize: 12, padding: "7px 12px", borderRadius: 999, border: `1px ${conv ? "dashed" : "solid"} ${conv ? "var(--hair-strong)" : "rgba(0,119,255,0.6)"}`, background: conv ? "transparent" : "rgba(0,119,255,0.12)" }}>{f.replace("*", "")}</code>; })}
           </div>

@@ -10,7 +10,7 @@ npm run build && npm start
 ```
 
 Next.js 16 (App Router) · TypeScript · plain CSS with design tokens (`app/globals.css`) · GSAP ScrollTrigger + Lenis ·
-Archivo / Instrument Serif / JetBrains Mono via `next/font`.
+Metropolis (brand typeface, via `@fontsource/metropolis`).
 
 ## Routes
 `/` · `/plugins` · `/plugins/[blender|unity|unreal]` · `/developers` · `/docs/[slug]` (`/docs` redirects) · `/explore` · `/pricing` (`#enterprise`) · `/about` · `/signin` ·
@@ -23,11 +23,12 @@ Archivo / Instrument Serif / JetBrains Mono via `next/font`.
 - `components/pages/*`, `components/studio/*` — page views.
 
 ## Themes
-Dark default; light via `data-theme="light"` on `<html>` (toggle in the footer / Studio sidebar, persisted, respects `prefers-color-scheme`).
+White is the default; the Deep Blue theme is `data-theme="dark"` on `<html>` (toggle in the footer / Studio sidebar, persisted, respects `prefers-color-scheme`).
+Palette per the Ctruh brand guidelines: Primary Blue `#0077FF`, Deep Blue `#001B99`, White `#FFFFFF`, plus alpha and one 60% tint (`#66ADFF`) for accent text on Deep Blue.
 `.force-dark` pins always-dark surfaces (film, device frames, viewer panes); `.band` is a saturated cobalt band.
 
 ## Placeholders still open (also marked `[PLACEHOLDER]` in the UI/code)
-Hero film · Studio + viewer recordings · library thumbnails · challenge/template/plug-in/API/SDK URLs (`lib/links.ts`) · auth provider (sign-in currently just continues to Studio) ·
+Studio + viewer recordings · library thumbnails · challenge/template/plug-in/API/SDK URLs (`lib/links.ts`) · auth provider (sign-in currently just continues to Studio) ·
 Docs content (MDX) · Explore posts (CMS) · founding story/team photo · claims and numbers to confirm (see the build prompt §10).
 
 ## Known design/AA conflict
