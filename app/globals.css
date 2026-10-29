@@ -1,26 +1,57 @@
 /* Verse Engine by Ctruh — global styles.
-   Only five colors: #0077FF primary · #001B99 cobalt · #FFFFFF · #FFFFFF tint · #001B99 void (+ alpha). */
-
-/* Ctruh brand palette: Primary Blue #0077FF · Deep Blue #001B99 · White #FFFFFF (+ tints/alpha of those).
-   Typeface: Metropolis — H1 Bold, H2 SemiBold, body Regular (brand guidelines, 2026). */
+   Only five colors: #0077FF primary · #001B99 cobalt · #FFFFFF · #E8F1FF tint · #070B1F void (+ alpha). */
 
 :root,
-[data-theme="light"] {
+[data-theme="dark"] {
   --blue: #0077ff;
   --cobalt: #001b99;
   --white: #ffffff;
-  --font-sans: "Metropolis", system-ui, sans-serif;
+  --tint: #e8f1ff;
+  --void: #070b1f;
 
+  --bg: #070b1f;
+  --bg-alt: #001b99;
+  --fg: #ffffff;
+  --body: rgba(232, 241, 255, 0.85);
+  --muted: rgba(232, 241, 255, 0.72);
+  --hair: rgba(232, 241, 255, 0.16);
+  --hair-soft: rgba(232, 241, 255, 0.1);
+  --hair-strong: rgba(232, 241, 255, 0.28);
+  --accent: #0077ff; /* large type, fills */
+  --label: #0077ff; /* small text */
+  --grid: rgba(0, 119, 255, 0.7);
+  --glow: rgba(0, 119, 255, 0.45);
+  --glow-edge: rgba(0, 27, 153, 0.25);
+  --shadow: rgba(7, 11, 31, 0.5);
+  --nav-bg: rgba(7, 11, 31, 0.66);
+  --surface: rgba(232, 241, 255, 0.05);
+  --surface-2: rgba(232, 241, 255, 0.1);
+  --card: rgba(0, 27, 153, 0.35);
+  --panel: #070b1f;
+  --stack: #070b1f;
+  --cta-text: #ffffff; /* text on #0077FF fills. White is 4.14:1; set to #070b1f for 4.7:1 (AA) if a hard gate */
+  --ghost-bd: rgba(232, 241, 255, 0.35);
+  --cube-edge: rgba(232, 241, 255, 0.9);
+  --cube-fill: rgba(0, 119, 255, 0.18);
+  --cube-line: rgba(232, 241, 255, 0.22);
+  --wordmark: #001b99;
+  --input-bg: rgba(232, 241, 255, 0.06);
+  --focus: #0077ff;
+  --pill-bg: rgba(0, 27, 153, 0.6);
+  color-scheme: dark;
+}
+
+[data-theme="light"] {
   --bg: #ffffff;
-  --bg-alt: rgba(0, 119, 255, 0.07);
+  --bg-alt: #e8f1ff;
   --fg: #001b99;
   --body: rgba(0, 27, 153, 0.85);
   --muted: rgba(0, 27, 153, 0.7);
   --hair: rgba(0, 27, 153, 0.14);
   --hair-soft: rgba(0, 27, 153, 0.08);
   --hair-strong: rgba(0, 27, 153, 0.3);
-  --accent: #0077ff; /* large type, fills */
-  --label: #001b99; /* small text */
+  --accent: #0077ff;
+  --label: #001b99;
   --grid: rgba(0, 119, 255, 0.35);
   --glow: rgba(0, 119, 255, 0.25);
   --glow-edge: rgba(0, 119, 255, 0.1);
@@ -28,99 +59,53 @@
   --nav-bg: rgba(255, 255, 255, 0.78);
   --surface: rgba(0, 27, 153, 0.04);
   --surface-2: rgba(0, 27, 153, 0.08);
-  --card: rgba(0, 119, 255, 0.08);
+  --card: #e8f1ff;
   --panel: #ffffff;
   --stack: #ffffff;
-  --band-bg: #001b99;
-  --band-tint: none;
-  --light-panel: rgba(0, 119, 255, 0.1); /* pale panel carrying Deep Blue text */
-  --cta-text: #ffffff; /* text on #0077FF fills. White is 4.14:1 (brand pairing) */
   --ghost-bd: rgba(0, 27, 153, 0.35);
   --cube-edge: rgba(0, 27, 153, 0.85);
   --cube-fill: rgba(0, 119, 255, 0.14);
   --cube-line: rgba(0, 27, 153, 0.2);
   --wordmark: rgba(0, 119, 255, 0.14);
   --input-bg: rgba(0, 27, 153, 0.04);
-  --focus: #0077ff;
   --pill-bg: rgba(255, 255, 255, 0.8);
   color-scheme: light;
 }
 
-/* Deep Blue theme. #66ADFF is a 60% tint of Primary Blue — used only for accent text, which Primary Blue itself can't carry on Deep Blue (3.1:1). */
-[data-theme="dark"] {
-  --bg: #001b99;
-  --bg-alt: rgba(255, 255, 255, 0.06);
-  --fg: #ffffff;
-  --body: rgba(255, 255, 255, 0.88);
-  --muted: rgba(255, 255, 255, 0.74);
-  --hair: rgba(255, 255, 255, 0.2);
-  --hair-soft: rgba(255, 255, 255, 0.12);
-  --hair-strong: rgba(255, 255, 255, 0.34);
-  --accent: #66adff;
-  --label: #66adff;
-  --grid: rgba(255, 255, 255, 0.28);
-  --glow: rgba(0, 119, 255, 0.6);
-  --glow-edge: rgba(0, 119, 255, 0.2);
-  --shadow: rgba(0, 27, 153, 0.5);
-  --nav-bg: rgba(0, 27, 153, 0.72);
-  --surface: rgba(255, 255, 255, 0.07);
-  --surface-2: rgba(255, 255, 255, 0.12);
-  --card: rgba(255, 255, 255, 0.1);
-  --panel: #001b99;
-  --stack: #001b99;
-  --band-bg: #001b99;
-  --band-tint: linear-gradient(rgba(255, 255, 255, 0.12), rgba(255, 255, 255, 0.12));
-  --light-panel: #ffffff;
-  --ghost-bd: rgba(255, 255, 255, 0.4);
-  --cube-edge: rgba(255, 255, 255, 0.9);
-  --cube-fill: rgba(0, 119, 255, 0.25);
-  --cube-line: rgba(255, 255, 255, 0.22);
-  --wordmark: rgba(255, 255, 255, 0.1);
-  --input-bg: rgba(255, 255, 255, 0.08);
-  --focus: #ffffff;
-  --pill-bg: rgba(0, 27, 153, 0.6);
-  color-scheme: dark;
-}
-
-/* Always-deep-blue surfaces (film, devices, preloader, viewer panes) regardless of theme. */
+/* Always-dark surfaces (film, devices, preloader, viewer panes) regardless of theme. */
 .force-dark {
-  --bg: #001b99;
+  --bg: #070b1f;
   --fg: #ffffff;
-  --body: rgba(255, 255, 255, 0.88);
-  --muted: rgba(255, 255, 255, 0.74);
-  --hair: rgba(255, 255, 255, 0.2);
-  --hair-soft: rgba(255, 255, 255, 0.12);
-  --hair-strong: rgba(255, 255, 255, 0.34);
-  --label: #66adff;
-  --accent: #66adff;
-  --surface: rgba(255, 255, 255, 0.07);
-  --surface-2: rgba(255, 255, 255, 0.12);
-  --card: rgba(255, 255, 255, 0.1);
-  --cube-edge: rgba(255, 255, 255, 0.9);
-  --cube-fill: rgba(0, 119, 255, 0.25);
-  --cube-line: rgba(255, 255, 255, 0.22);
-  --grid: rgba(255, 255, 255, 0.28);
-  --glow: rgba(0, 119, 255, 0.6);
-  --ghost-bd: rgba(255, 255, 255, 0.4);
-  --input-bg: rgba(255, 255, 255, 0.08);
+  --body: rgba(232, 241, 255, 0.85);
+  --muted: rgba(232, 241, 255, 0.72);
+  --hair: rgba(232, 241, 255, 0.16);
+  --hair-soft: rgba(232, 241, 255, 0.1);
+  --hair-strong: rgba(232, 241, 255, 0.28);
+  --label: #0077ff;
+  --surface: rgba(232, 241, 255, 0.05);
+  --surface-2: rgba(232, 241, 255, 0.1);
+  --card: rgba(0, 27, 153, 0.35);
+  --cube-edge: rgba(232, 241, 255, 0.9);
+  --cube-fill: rgba(0, 119, 255, 0.18);
+  --cube-line: rgba(232, 241, 255, 0.22);
+  --grid: rgba(0, 119, 255, 0.7);
+  --glow: rgba(0, 119, 255, 0.45);
+  --ghost-bd: rgba(232, 241, 255, 0.35);
+  --input-bg: rgba(232, 241, 255, 0.06);
   color: #ffffff;
 }
-/* Saturated bands: white text in both themes (Deep Blue on light; Deep Blue lifted with a white overlay on the Deep Blue theme). */
+/* Saturated cobalt bands: white text in both themes. */
 .band {
-  --bg: var(--band-bg);
+  --bg: #001b99;
   --fg: #ffffff;
-  --body: rgba(255, 255, 255, 0.92);
-  --muted: rgba(255, 255, 255, 0.8);
-  --hair: rgba(255, 255, 255, 0.28);
-  --hair-strong: rgba(255, 255, 255, 0.5);
-  --surface: rgba(255, 255, 255, 0.1);
-  --surface-2: rgba(255, 255, 255, 0.16);
-  --label: #ffffff;
-  --accent: #ffffff;
-  --ghost-bd: rgba(255, 255, 255, 0.5);
-  --cube-edge: rgba(255, 255, 255, 0.95);
-  --cube-line: rgba(255, 255, 255, 0.25);
-  background: var(--band-tint), var(--band-bg);
+  --body: rgba(232, 241, 255, 0.88);
+  --muted: rgba(232, 241, 255, 0.78);
+  --hair: rgba(232, 241, 255, 0.25);
+  --label: #e8f1ff;
+  --ghost-bd: rgba(232, 241, 255, 0.45);
+  --cube-edge: rgba(232, 241, 255, 0.95);
+  --cube-line: rgba(232, 241, 255, 0.25);
+  background: #001b99;
   color: #ffffff;
 }
 
@@ -133,7 +118,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--fg);
-  font-family: var(--font-sans);
+  font-family: var(--font-archivo), Archivo, system-ui, sans-serif;
   font-size: 16px;
   line-height: 1.5;
   overflow-x: hidden;
@@ -152,25 +137,25 @@ button { font: inherit; color: inherit; }
 .skip:focus { top: 12px; }
 
 /* ---------- type ---------- */
-.mono { font-family: var(--font-sans); font-weight: 500; font-variant-numeric: tabular-nums; }
-.wide { letter-spacing: -0.01em; }
-.serif { font-style: italic; font-weight: 600; letter-spacing: -0.02em; }
+.mono { font-family: var(--font-mono), "JetBrains Mono", monospace; }
+.wide { font-stretch: 125%; }
+.serif { font-family: var(--font-serif), "Instrument Serif", serif; font-style: italic; font-weight: 400; }
 .label { color: var(--label); }
 .up { text-transform: uppercase; }
 .eyebrow { font-size: 12px; letter-spacing: 0.14em; }
-.h-light { font-weight: 700; line-height: 1; }
-.hl { font-weight: 800; color: var(--accent); }
+.h-light { font-weight: 300; line-height: 0.95; }
+.hl { font-weight: 600; color: var(--accent); }
 
 /* ---------- layout ---------- */
 .wrap { max-width: 1344px; margin: 0 auto; padding: 0 48px; width: 100%; }
 .sec { position: relative; }
 .row-between { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; }
-.note { font-family: var(--font-sans); font-size: 13px; line-height: 1.7; letter-spacing: 0.04em; color: var(--muted); }
+.note { font-family: var(--font-mono), monospace; font-size: 13px; line-height: 1.7; letter-spacing: 0.04em; color: var(--muted); }
 .divider { border-top: 1px solid var(--hair); }
 
 /* ---------- controls ---------- */
 .navlink {
-  color: var(--fg); text-decoration: none; font-family: var(--font-sans); font-size: 12px;
+  color: var(--fg); text-decoration: none; font-family: var(--font-mono), monospace; font-size: 12px;
   letter-spacing: 0.1em; padding: 12px 10px; border-radius: 999px; transition: background 0.25s, color 0.25s; min-height: 44px; display: inline-flex; align-items: center;
 }
 .navlink:hover, .navlink[aria-current="page"] { background: var(--surface-2); }
@@ -191,24 +176,24 @@ button { font: inherit; color: inherit; }
 
 .tab {
   min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--ghost-bd); background: transparent; color: var(--fg);
-  font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.08em; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.2s;
+  font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.08em; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; transition: background 0.2s;
 }
 .tab:hover { background: var(--surface-2); }
 .tab[aria-selected="true"], .tab[aria-checked="true"] { background: var(--blue); border-color: var(--blue); color: var(--cta-text); }
 .tabs { display: flex; gap: 8px; flex-wrap: wrap; }
 
-.fld { display: flex; flex-direction: column; gap: 8px; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.12em; color: var(--muted); }
+.fld { display: flex; flex-direction: column; gap: 8px; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.12em; color: var(--muted); }
 .inp, .sel {
   width: 100%; min-height: 48px; padding: 12px 16px; border-radius: 14px; border: 1px solid var(--hair-strong); background: var(--input-bg);
-  color: var(--fg); font: 400 16px var(--font-sans); letter-spacing: 0;
+  color: var(--fg); font: 400 16px var(--font-archivo), Archivo, sans-serif; letter-spacing: 0;
 }
 .inp::placeholder { color: var(--muted); }
 textarea.inp { resize: vertical; }
 .sel { appearance: none; padding-right: 40px; background-image: linear-gradient(45deg, transparent 50%, var(--fg) 50%), linear-gradient(135deg, var(--fg) 50%, transparent 50%); background-position: calc(100% - 20px) 55%, calc(100% - 15px) 55%; background-size: 5px 5px; background-repeat: no-repeat; }
-.sel option { color: #001B99; background: #fff; }
+.sel option { color: #070b1f; background: #fff; }
 input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--blue); }
 
-.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-family: var(--font-sans); font-size: 11px; letter-spacing: 0.1em; border: 1px solid var(--hair-strong); }
+.pill { display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px; border-radius: 999px; font-family: var(--font-mono), monospace; font-size: 11px; letter-spacing: 0.1em; border: 1px solid var(--hair-strong); }
 
 /* ---------- motion ---------- */
 .mask { display: block; overflow: hidden; }
@@ -330,12 +315,12 @@ input[type="checkbox"] { width: 20px; height: 20px; accent-color: var(--blue); }
 .sw[aria-checked="true"] { background: var(--blue); }
 .sw span { position: absolute; top: 3px; left: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; transition: transform 0.25s cubic-bezier(0.2, 1.3, 0.4, 1); }
 .sw[aria-checked="true"] span { transform: translateX(20px); }
-.step { display: flex; align-items: center; gap: 10px; font-family: var(--font-sans); font-size: 12px; letter-spacing: 0.1em; color: var(--muted); }
+.step { display: flex; align-items: center; gap: 10px; font-family: var(--font-mono), monospace; font-size: 12px; letter-spacing: 0.1em; color: var(--muted); }
 .step span { width: 28px; height: 28px; border-radius: 50%; border: 1px solid var(--hair-strong); display: flex; align-items: center; justify-content: center; }
 .step[aria-current="step"] { color: var(--fg); }
 .step[aria-current="step"] span { background: var(--blue); border-color: var(--blue); color: var(--cta-text); }
 .data-table { width: 100%; border-collapse: collapse; font-size: 15px; }
-.data-table th { text-align: left; font-family: var(--font-sans); font-weight: 400; font-size: 11px; letter-spacing: 0.12em; color: var(--muted); padding: 12px 16px; border-bottom: 1px solid var(--hair); }
+.data-table th { text-align: left; font-family: var(--font-mono), monospace; font-weight: 400; font-size: 11px; letter-spacing: 0.12em; color: var(--muted); padding: 12px 16px; border-bottom: 1px solid var(--hair); }
 .data-table td { padding: 16px; border-bottom: 1px solid var(--hair-soft); }
 .faq { width: 100%; display: flex; justify-content: space-between; align-items: center; gap: 16px; min-height: 64px; padding: 16px 22px; background: none; border: 0; cursor: pointer; text-align: left; font-size: 18px; font-weight: 600; }
 
