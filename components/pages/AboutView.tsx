@@ -62,10 +62,10 @@ export function AboutView() {
             <div className="wrap" style={{ maxWidth: 960 }}>
               <div className="row-between"><h2 id="cost" className="wide" style={{ fontWeight: 600, fontSize: "clamp(30px, 3.6vw, 48px)", textTransform: "uppercase" }}>STREAMING COST</h2><span className="mono eyebrow">PER THOUSAND VIEWER-HOURS</span></div>
               {/* confirm before launch */}
-              {[["Verse Engine", "ABOUT $252", 6, "#0077FF"], ["Cloud GPU streaming", "$498 – $6,000", 100, "#FFFFFF"]].map(([n, v, w, c]) => (
+              {[["Verse Engine", "ABOUT $252", 6, "#0077FF"], ["Cloud GPU streaming", "$498 – $6,000", 100, "#E8F1FF"]].map(([n, v, w, c]) => (
                 <div key={n as string} style={{ marginTop: 32 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 10, gap: 12, flexWrap: "wrap" }}><span style={{ fontSize: 20, fontWeight: 600 }}>{n}</span><span className="mono">{v}</span></div>
-                  <div style={{ height: 14, borderRadius: 99, background: "rgba(255,255,255,0.14)", overflow: "hidden" }}><div className="grow" style={{ height: "100%", width: `${w}%`, background: c as string, borderRadius: 99 }} /></div>
+                  <div style={{ height: 14, borderRadius: 99, background: "rgba(232,241,255,0.14)", overflow: "hidden" }}><div className="grow" style={{ height: "100%", width: `${w}%`, background: c as string, borderRadius: 99 }} /></div>
                 </div>
               ))}
             </div>

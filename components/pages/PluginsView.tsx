@@ -42,7 +42,7 @@ export function PluginsView() {
                   <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(closest-side, rgba(0,119,255,0.7), rgba(0,27,153,0))" }} />
                   <Cube size="md" style={{ position: "relative", marginTop: -28 }} />
                   <span className="mono" style={{ position: "absolute", top: 18, left: 20, fontSize: 11, letterSpacing: "0.12em" }}>{t.editor}</span>
-                  <span className="mono" style={{ position: "absolute", bottom: 16, right: 20, fontSize: 11, letterSpacing: "0.1em", padding: "6px 12px", borderRadius: 999, background: "rgba(0,27,153,0.6)" }}>PUBLISH TO VERSE ENGINE ▸</span>
+                  <span className="mono" style={{ position: "absolute", bottom: 16, right: 20, fontSize: 11, letterSpacing: "0.1em", padding: "6px 12px", borderRadius: 999, background: "rgba(7,11,31,0.6)" }}>PUBLISH TO VERSE ENGINE ▸</span>
                 </div>
                 <div style={{ padding: 28, display: "flex", flexDirection: "column", gap: 14 }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "baseline", gap: 8, flexWrap: "wrap" }}><h3 className="wide" style={{ fontWeight: 600, fontSize: 32, textTransform: "uppercase" }}>{t.name}</h3><span className="mono label" style={{ fontSize: 12 }}>{`SCENE → LINK · ${t.time}`}</span></div>
@@ -64,7 +64,7 @@ export function PluginsView() {
           <span className="mono eyebrow">HOW IT WORKS</span>
           <h2 id="how" className="wide h-light" style={{ marginTop: 18, fontSize: "clamp(36px, 5vw, 72px)", letterSpacing: "-0.02em" }}>FROM EDITOR TO <span style={{ fontWeight: 800 }}>ANY SCREEN.</span></h2>
           <div style={{ position: "relative", marginTop: 56 }}>
-            <div aria-hidden="true" style={{ height: 2, background: "rgba(255,255,255,0.2)", overflow: "hidden" }}><span className="travel" /></div>
+            <div aria-hidden="true" style={{ height: 2, background: "rgba(232,241,255,0.2)", overflow: "hidden" }}><span className="travel" /></div>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 32, marginTop: 32 }}>
               {PLUGIN_STEPS.map((s) => (
                 <div key={s.n}><span className="mono" style={{ fontSize: 13 }}>{s.n}</span><h3 className="wide" style={{ fontWeight: 600, fontSize: 26, margin: "10px 0", textTransform: "uppercase" }}>{s.t}</h3><p style={{ color: "var(--body)" }}>{s.d}</p></div>

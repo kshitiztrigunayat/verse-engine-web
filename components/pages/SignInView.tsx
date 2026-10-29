@@ -18,13 +18,13 @@ export function SignInView() {
 
   return (
     <div className="signin-grid" style={{ display: "grid", gridTemplateColumns: "minmax(0, 1fr) minmax(0, 1fr)", minHeight: "100vh" }}>
-      <div className="force-dark hide-md" style={{ position: "relative", overflow: "hidden", background: "#001B99", padding: 48, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+      <div className="force-dark hide-md" style={{ position: "relative", overflow: "hidden", background: "#070B1F", padding: 48, display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
         <div aria-hidden="true" style={{ position: "absolute", inset: 0 }}>{[0, -1.5, -3, -4.5].map((d) => <div key={d} className="frame" style={{ animationDelay: `${d}s` }} />)}</div>
         <Cube style={{ position: "absolute", left: "50%", top: "46%", transform: "translate(-50%,-50%)", filter: "drop-shadow(0 0 40px rgba(0,119,255,0.8))" }} />
         <div style={{ position: "relative" }}><Lockup sub="STUDIO · BY CTRUH" /></div>
         <div style={{ position: "relative" }}>
           <h2 className="h-light"><span className="serif" style={{ display: "block", fontSize: "clamp(52px, 5.5vw, 80px)" }}>Your scenes</span><span className="wide" style={{ display: "block", fontSize: "clamp(32px, 3.6vw, 52px)", letterSpacing: "-0.02em" }}>ARE WAITING.</span></h2>
-          <p className="mono" style={{ marginTop: 18, fontSize: 12, letterSpacing: "0.14em", color: "rgba(255,255,255,0.8)" }}>FREE TO START · VIEWERS NEVER PAY</p>
+          <p className="mono" style={{ marginTop: 18, fontSize: 12, letterSpacing: "0.14em", color: "rgba(232,241,255,0.8)" }}>FREE TO START · VIEWERS NEVER PAY</p>
         </div>
       </div>
       <main id="main" style={{ display: "flex", alignItems: "center", justifyContent: "center", padding: "48px 24px" }}>

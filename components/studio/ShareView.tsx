@@ -31,9 +31,9 @@ export function ShareView({ file, plan }: { file: string; plan: boolean }) {
             <div><span className="mono label eyebrow">STEP 3 OF 3 · SEND IT FLYING</span><h1 className="h-light" style={{ marginTop: 10 }}><span className="serif" style={{ fontSize: "clamp(40px, 4vw, 56px)" }}>Your scene</span> <span className="wide" style={{ fontSize: "clamp(28px, 3vw, 42px)", letterSpacing: "-0.02em" }}>IS READY</span></h1></div>
             <span className="mono label" style={{ fontSize: 11, letterSpacing: "0.1em" }}>✓ SIGNED &amp; READY FOR EVERY DEVICE</span>
           </div>
-          <div className="force-dark" style={{ position: "relative", aspectRatio: "16 / 10", borderRadius: 28, overflow: "hidden", background: "#001B99", border: "1px solid var(--hair)" }}>
-            <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(closest-side, rgba(0,119,255,0.45), rgba(0,27,153,0))" }} />
-            <div aria-hidden="true" style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", perspective: 400, overflow: "hidden" }}><div className="floor" style={{ position: "absolute", left: -600, right: -600, top: 0, height: 700, transformOrigin: "50% 0", transform: "rotateX(74deg)", backgroundImage: "linear-gradient(rgba(0,119,255,0.6) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(0,119,255,0.6) 1.5px, transparent 1.5px)", backgroundSize: "60px 60px" }} /><div style={{ position: "absolute", inset: 0, background: "linear-gradient(#001B99, transparent 55%)" }} /></div>
+          <div className="force-dark" style={{ position: "relative", aspectRatio: "16 / 10", borderRadius: 28, overflow: "hidden", background: "#070B1F", border: "1px solid var(--hair)" }}>
+            <div aria-hidden="true" style={{ position: "absolute", inset: 0, background: "radial-gradient(closest-side, rgba(0,119,255,0.45), rgba(7,11,31,0))" }} />
+            <div aria-hidden="true" style={{ position: "absolute", left: 0, right: 0, bottom: 0, height: "45%", perspective: 400, overflow: "hidden" }}><div className="floor" style={{ position: "absolute", left: -600, right: -600, top: 0, height: 700, transformOrigin: "50% 0", transform: "rotateX(74deg)", backgroundImage: "linear-gradient(rgba(0,119,255,0.6) 1.5px, transparent 1.5px), linear-gradient(90deg, rgba(0,119,255,0.6) 1.5px, transparent 1.5px)", backgroundSize: "60px 60px" }} /><div style={{ position: "absolute", inset: 0, background: "linear-gradient(#070B1F, transparent 55%)" }} /></div>
             <Cube style={{ position: "absolute", inset: 0 }} />
             <div style={{ position: "absolute", left: 20, bottom: 18, right: 20, display: "flex", justifyContent: "space-between", alignItems: "flex-end", gap: 12, flexWrap: "wrap" }}><span className="wide" style={{ fontSize: 20, fontWeight: 600 }}>{name || "New scene"}</span><span className="mono" style={{ fontSize: 10, letterSpacing: "0.1em", opacity: 0.85 }}>DRAG TO LOOK · WASD TO WALK · SCROLL TO ZOOM</span></div>
             {rs === 2 && <span className="mono fadeup" style={{ position: "absolute", top: 16, right: 16, padding: "6px 12px", borderRadius: 999, background: "#0077FF", fontSize: 11, letterSpacing: "0.1em" }}>RESTYLED ✓</span>}
@@ -70,7 +70,7 @@ export function ShareView({ file, plan }: { file: string; plan: boolean }) {
             })}
           </div>
           {note && <span className="mono label fadeup" role="status" style={{ fontSize: 11, letterSpacing: "0.08em" }}>{NOTES[note]}</span>}
-          {embed && <pre className="mono force-dark fadeup" tabIndex={0} style={{ margin: 0, padding: 16, borderRadius: 16, background: "#001B99", border: "1px solid var(--hair)", fontSize: 12, lineHeight: 1.7, overflowX: "auto" }}>{EMBED}</pre>}
+          {embed && <pre className="mono force-dark fadeup" tabIndex={0} style={{ margin: 0, padding: 16, borderRadius: 16, background: "#070B1F", border: "1px solid var(--hair)", fontSize: 12, lineHeight: 1.7, overflowX: "auto" }}>{EMBED}</pre>}
           <Link className="cta cta-blue cta-lg" href={ROUTES.studio}>Save to Studio</Link>
         </section>
       </div>

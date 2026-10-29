@@ -5,11 +5,11 @@ import { LINKS } from "@/lib/links";
 import { useReducedMotion } from "@/lib/hooks";
 import { Cube } from "@/components/ui/Cube";
 
-const SK = { fill: "none", stroke: "#FFFFFF", strokeWidth: 1.6 } as const;
+const SK = { fill: "none", stroke: "#E8F1FF", strokeWidth: 1.6 } as const;
 function Sketch({ kind }: { kind: string }) {
   const p = { width: 240, height: 150, viewBox: "0 0 260 160", ...SK, "aria-hidden": true } as const;
   if (kind === "plan") return <svg {...p}><rect x="10" y="10" width="240" height="140" /><path d="M110 10v80M110 120v30M10 80h70M140 80h110M180 80v70" /><path d="M80 80a30 30 0 0 1 30 30" stroke="#0077FF" /><rect x="30" y="28" width="50" height="30" stroke="#0077FF" /></svg>;
-  if (kind === "config") return <svg {...p}><path d="M40 70h150v50H40zM40 70V50a10 10 0 0 1 10-10h130a10 10 0 0 1 10 10v20M30 75h20v45H30zM180 75h20v45h-20z" /><circle cx="226" cy="44" r="10" fill="#0077FF" stroke="none" /><circle cx="226" cy="74" r="10" fill="#FFFFFF" stroke="none" /><circle cx="226" cy="104" r="10" fill="#001B99" /></svg>;
+  if (kind === "config") return <svg {...p}><path d="M40 70h150v50H40zM40 70V50a10 10 0 0 1 10-10h130a10 10 0 0 1 10 10v20M30 75h20v45H30zM180 75h20v45h-20z" /><circle cx="226" cy="44" r="10" fill="#0077FF" stroke="none" /><circle cx="226" cy="74" r="10" fill="#E8F1FF" stroke="none" /><circle cx="226" cy="104" r="10" fill="#070B1F" /></svg>;
   if (kind === "home") return <svg {...p} strokeLinejoin="round"><path d="M60 80 130 40l70 40v60H60z" /><path d="M40 92 130 30l90 62" stroke="#0077FF" /><rect x="112" y="100" width="36" height="40" /></svg>;
   return <svg {...p} strokeLinejoin="round"><path d="M20 140V80l40-25v25l40-25v25l40-25v25l40-25v85z" /><path d="M200 140V40h20v100" /><circle cx="60" cy="110" r="6" fill="#0077FF" stroke="none" /><circle cx="140" cy="110" r="6" fill="#0077FF" stroke="none" /><path d="M66 110h68" stroke="#0077FF" strokeDasharray="3 4" /></svg>;
 }
@@ -61,12 +61,12 @@ export function Library() {
             );
           })}
           <div className="force-dark lib-preview" aria-hidden="true" style={{ position: "absolute", left: 0, top: 0, width: 320, pointerEvents: "none", transform: `translate(${px}px, ${py}px)`, transition: "transform .45s cubic-bezier(.2,.8,.2,1)", zIndex: 5 }}>
-            <div key={h} className="swap" style={{ borderRadius: 24, overflow: "hidden", background: "#001B99", border: "1px solid rgba(255,255,255,0.3)", boxShadow: "0 40px 80px rgba(0,27,153,0.5)" }}>
-              <div style={{ position: "relative", height: 200, backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)", backgroundSize: "22px 22px", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div key={h} className="swap" style={{ borderRadius: 24, overflow: "hidden", background: "#001B99", border: "1px solid rgba(232,241,255,0.3)", boxShadow: "0 40px 80px rgba(7,11,31,0.5)" }}>
+              <div style={{ position: "relative", height: 200, backgroundImage: "linear-gradient(rgba(232,241,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(232,241,255,0.1) 1px, transparent 1px)", backgroundSize: "22px 22px", display: "flex", alignItems: "center", justifyContent: "center" }}>
                 <Sketch kind={LIB_ROWS[h].kind} />
                 <Cube size="xs" style={{ position: "absolute", right: 18, top: 18 }} />
               </div>
-              <div style={{ padding: "16px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#001B99", color: "#fff" }}><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "#FFFFFF" }}>{LIB_ROWS[h].caption}</span><span style={{ fontSize: 12, fontWeight: 700, padding: "6px 12px", borderRadius: 999, background: "#0077FF" }}>Open</span></div>
+              <div style={{ padding: "16px 18px", display: "flex", justifyContent: "space-between", alignItems: "center", background: "#070B1F", color: "#fff" }}><span className="mono" style={{ fontSize: 11, letterSpacing: "0.1em", color: "#E8F1FF" }}>{LIB_ROWS[h].caption}</span><span style={{ fontSize: 12, fontWeight: 700, padding: "6px 12px", borderRadius: 999, background: "#0077FF" }}>Open</span></div>
             </div>
           </div>
         </div>

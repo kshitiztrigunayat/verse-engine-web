@@ -49,10 +49,10 @@ export function ScenesView() {
               const ready = s.status === "Ready";
               return (
                 <article key={s.id} className="scard lift-card">
-                  <div className="force-dark" style={{ position: "relative", height: 170, background: i % 2 ? "#001B99" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
+                  <div className="force-dark" style={{ position: "relative", height: 170, background: i % 2 ? "#070B1F" : "#001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}>
                     <Cube size="sm" />
                     <span style={{ position: "absolute", top: 14, left: 14 }}><StatusPill tone={ready ? "ready" : "processing"} pulse={!ready}>{s.status.toUpperCase()}</StatusPill></span>
-                    <span className="mono" style={{ position: "absolute", top: 14, right: 14, fontSize: 10, letterSpacing: "0.12em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.35)" }}>{s.source}</span>
+                    <span className="mono" style={{ position: "absolute", top: 14, right: 14, fontSize: 10, letterSpacing: "0.12em", padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(232,241,255,0.35)" }}>{s.source}</span>
                   </div>
                   <div style={{ padding: 20, display: "flex", flexDirection: "column", gap: 16 }}>
                     <div><div style={{ fontWeight: 600, fontSize: 18 }}>{s.name}</div><div className="mono" style={{ marginTop: 6, fontSize: 10, letterSpacing: "0.1em", color: "var(--muted)" }}>{`${fmt(s.views)} VIEWS · ${fmt(s.sessions)} SESSIONS · ${s.date}`.toUpperCase()}</div></div>

@@ -25,12 +25,12 @@ export function DevelopersView() {
             <p className="fadeup" style={{ marginTop: 24, fontSize: 19, color: "var(--body)", maxWidth: 520, animationDelay: ".4s" }}>Upload, publish, embed and track 3D scenes with a REST API — or skip the backend and drop in one script tag.</p>
             <div className="fadeup" style={{ marginTop: 28, display: "flex", gap: 12, flexWrap: "wrap", animationDelay: ".5s" }}><Link className="cta cta-blue cta-lg" href={ROUTES.keys}>Get an API key</Link><Link className="cta cta-ghost cta-lg" href={ROUTES.doc("scenes-api")}>API reference</Link></div>
           </div>
-          <div className="force-dark" style={{ borderRadius: 24, border: "1px solid rgba(255,255,255,0.2)", background: "#001B99", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,119,255,0.3)", minWidth: 0 }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, padding: 12, borderBottom: "1px solid rgba(255,255,255,0.12)", flexWrap: "wrap" }}>
+          <div className="force-dark" style={{ borderRadius: 24, border: "1px solid rgba(232,241,255,0.2)", background: "#070B1F", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,119,255,0.3)", minWidth: 0 }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8, padding: 12, borderBottom: "1px solid rgba(232,241,255,0.12)", flexWrap: "wrap" }}>
               <Tabs label="Code samples" items={DEV_TABS} value={tab} onChange={setTab} />
               <button type="button" className="tab" onClick={() => copy(DEV_CODE[tab])} aria-live="polite">{copied ? "COPIED ✓" : "COPY"}</button>
             </div>
-            <pre key={tab} className="mono fadeup" tabIndex={0} style={{ margin: 0, padding: 24, minHeight: 240, fontSize: 13, lineHeight: 1.75, color: "#FFFFFF", overflowX: "auto", whiteSpace: "pre" }}>{DEV_CODE[tab]}<span className="caret">▍</span></pre>
+            <pre key={tab} className="mono fadeup" tabIndex={0} style={{ margin: 0, padding: 24, minHeight: 240, fontSize: 13, lineHeight: 1.75, color: "#E8F1FF", overflowX: "auto", whiteSpace: "pre" }}>{DEV_CODE[tab]}<span className="caret">▍</span></pre>
           </div>
         </div>
       </PageHero>
@@ -39,11 +39,11 @@ export function DevelopersView() {
         <div className="wrap">
           <span id="flow" className="mono eyebrow">THE ROUND TRIP</span>
           <div style={{ marginTop: 40 }}>
-            <div aria-hidden="true" style={{ height: 2, background: "rgba(255,255,255,0.2)", overflow: "hidden" }}><span className="travel" /></div>
+            <div aria-hidden="true" style={{ height: 2, background: "rgba(232,241,255,0.2)", overflow: "hidden" }}><span className="travel" /></div>
             <ol style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: 28, marginTop: 28 }}>
               {DEV_FLOW.map((f) => (
                 <li key={f.code} style={{ display: "flex", flexDirection: "column", gap: 12, alignItems: "flex-start" }}>
-                  <code className="node mono" style={{ fontSize: 13, padding: "10px 14px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.4)", background: "rgba(255,255,255,0.14)", color: "#FFFFFF" }}>{f.code}</code>
+                  <code className="node mono" style={{ fontSize: 13, padding: "10px 14px", borderRadius: 999, border: "1px solid rgba(232,241,255,0.4)", background: "#070B1F", color: "#E8F1FF" }}>{f.code}</code>
                   <span style={{ color: "var(--body)" }}>{f.d}</span>
                 </li>
               ))}

@@ -3,7 +3,7 @@ const TONES: Record<Tone, { bg: string; c: string; bd: string }> = {
   ready: { bg: "rgba(0,119,255,0.35)", c: "#FFFFFF", bd: "#0077FF" },
   active: { bg: "rgba(0,119,255,0.35)", c: "#FFFFFF", bd: "#0077FF" },
   connected: { bg: "rgba(0,119,255,0.3)", c: "#FFFFFF", bd: "#0077FF" },
-  processing: { bg: "#001B99", c: "#FFFFFF", bd: "rgba(255,255,255,0.45)" },
+  processing: { bg: "#070B1F", c: "#E8F1FF", bd: "rgba(232,241,255,0.45)" },
   paused: { bg: "transparent", c: "var(--fg)", bd: "var(--hair-strong)" },
   off: { bg: "transparent", c: "var(--fg)", bd: "var(--hair-strong)" },
   failing: { bg: "#FFFFFF", c: "#001B99", bd: "#001B99" },

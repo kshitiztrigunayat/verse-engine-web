@@ -30,7 +30,7 @@ export function Tools() {
                 <div className="tg" aria-hidden="true" />
                 <div className="mono lift-sm" style={{ position: "relative", display: "flex", justifyContent: "space-between", fontSize: 12, letterSpacing: "0.1em", gap: 8 }}><span>{`[0${i + 1}]`}</span><span>{c.tag}</span></div>
                 {!soon ? (
-                  <div className="lift" style={{ position: "relative", alignSelf: "center", width: 92, height: 92, borderRadius: "50%", background: "#FFFFFF", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 24px 50px rgba(0,27,153,0.5)" }}>
+                  <div className="lift" style={{ position: "relative", alignSelf: "center", width: 92, height: 92, borderRadius: "50%", background: "#FFFFFF", display: "flex", alignItems: "center", justifyContent: "center", boxShadow: "0 24px 50px rgba(7,11,31,0.5)" }}>
                     <svg width="40" height="40" viewBox="0 0 32 32" fill="none" stroke="#001B99" strokeWidth="2.2" aria-hidden="true">{ICONS[c.icon as keyof typeof ICONS]}</svg>
                   </div>
                 ) : (

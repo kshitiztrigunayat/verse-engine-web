@@ -19,7 +19,7 @@ export function HeroFilm() {
   };
 
   return (
-    <div className="force-dark" style={{ marginTop: 56, position: "relative", aspectRatio: "16 / 9", borderRadius: 28, overflow: "hidden", background: "#001B99", border: "1px solid rgba(255,255,255,0.18)", boxShadow: "0 50px 140px rgba(0,119,255,0.35)" }}>
+    <div className="force-dark" style={{ marginTop: 56, position: "relative", aspectRatio: "16 / 9", borderRadius: 28, overflow: "hidden", background: "#070B1F", border: "1px solid rgba(232,241,255,0.18)", boxShadow: "0 50px 140px rgba(0,119,255,0.35)" }}>
       <video
         ref={video}
         poster="/hero-film-poster.jpg"
@@ -30,13 +30,13 @@ export function HeroFilm() {
         onPlay={() => { setPlaying(true); setEnded(false); }}
         onPause={() => setPlaying(false)}
         onEnded={() => { setPlaying(false); setEnded(true); }}
-        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", background: "#001B99" }}
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", background: "#070B1F" }}
       >
         <source src="/hero-film.mp4" type="video/mp4" />
         <track kind="captions" srcLang="en" label="English" src="/hero-film.en.vtt" default />
       </video>
       {showButton && (
-        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(rgba(0,27,153,0.05), rgba(0,27,153,0.35))" }}>
+        <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center", background: "linear-gradient(rgba(7,11,31,0.05), rgba(7,11,31,0.35))" }}>
           <button className="playbig ringpulse" type="button" onClick={play} aria-label={ended ? "Replay the film" : "Play the film"} style={{ width: 104, height: 104, borderRadius: "50%", border: 0, background: "#0077FF", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer" }}>
             {ended ? (
               <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7M3 4v5h5" /></svg>

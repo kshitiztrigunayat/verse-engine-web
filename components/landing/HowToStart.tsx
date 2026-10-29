@@ -1,7 +1,7 @@
 import { CopyButton } from "@/components/ui/CopyButton";
 import { Cube } from "@/components/ui/Cube";
 
-const chip = { padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(255,255,255,0.4)" } as const;
+const chip = { padding: "5px 10px", borderRadius: 999, border: "1px solid rgba(232,241,255,0.4)" } as const;
 const TOPS = [92, 124, 156];
 
 function Card({ n, title, sub, top, children }: { n: string; title: string; sub: string; top: number; children: React.ReactNode }) {
@@ -37,7 +37,7 @@ export function HowToStart() {
             <P>A 2 GB Blender scene. A laser scan of an office. A phone photo of a floor plan. Throw it at Verse Engine — or hit <strong style={{ color: "var(--fg)" }}>Publish to Verse Engine</strong> without leaving Blender, Unity or Unreal.</P>
             <div className="band" style={{ position: "relative", borderRadius: 24, padding: 28, overflow: "hidden" }}>
               <div aria-hidden="true" style={{ position: "absolute", right: -80, top: -80, width: 320, height: 320, borderRadius: "50%", background: "radial-gradient(closest-side, rgba(0,119,255,0.9), rgba(0,119,255,0))" }} />
-              <div style={{ position: "relative", border: "1.5px dashed rgba(255,255,255,0.5)", borderRadius: 18, padding: 26, display: "flex", flexDirection: "column", alignItems: "center", gap: 12, textAlign: "center" }}>
+              <div style={{ position: "relative", border: "1.5px dashed rgba(232,241,255,0.5)", borderRadius: 18, padding: 26, display: "flex", flexDirection: "column", alignItems: "center", gap: 12, textAlign: "center" }}>
                 <div className="float" style={{ width: 52, height: 52, borderRadius: "50%", background: "#FFFFFF", display: "flex", alignItems: "center", justifyContent: "center" }}><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#001B99" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 16V4M6 10l6-6 6 6M4 20h16" /></svg></div>
                 <div style={{ fontWeight: 600, fontSize: 17 }}>Drag anything 3D here</div>
                 <div className="mono" style={{ display: "flex", flexWrap: "wrap", gap: 6, justifyContent: "center", fontSize: 12 }}>
@@ -45,9 +45,9 @@ export function HowToStart() {
                   <span style={{ padding: "5px 10px", borderRadius: 999, background: "#FFFFFF", color: "#001B99" }}>20+ TYPES</span>
                 </div>
               </div>
-              <div style={{ position: "relative", marginTop: 16, padding: "14px 16px", borderRadius: 16, background: "rgba(255,255,255,0.14)", display: "flex", flexDirection: "column", gap: 10 }}>
+              <div style={{ position: "relative", marginTop: 16, padding: "14px 16px", borderRadius: 16, background: "#070B1F", display: "flex", flexDirection: "column", gap: 10 }}>
                 <div style={{ display: "flex", justifyContent: "space-between", fontSize: 14 }}><span className="mono">hsr-office-scan.e57</span><span className="mono" style={{ opacity: 0.8 }}>3.4 GB</span></div>
-                <div style={{ height: 6, borderRadius: 99, background: "rgba(255,255,255,0.12)", overflow: "hidden" }}><div className="loopbar" style={{ height: "100%", background: "#0077FF" }} /></div>
+                <div style={{ height: 6, borderRadius: 99, background: "rgba(232,241,255,0.12)", overflow: "hidden" }}><div className="loopbar" style={{ height: "100%", background: "#0077FF" }} /></div>
               </div>
             </div>
           </Card>
@@ -70,17 +70,17 @@ export function HowToStart() {
 
           <Card n="03" title="Send it flying." sub="SHARE ONE LINK" top={TOPS[2]}>
             <P>Paste it into WhatsApp, a pitch deck or your website. Lock it to private, collect comments, export a video — and change the scene later without changing the link.</P>
-            <div style={{ borderRadius: 24, padding: 28, background: "var(--light-panel)", color: "#001B99", display: "flex", flexDirection: "column", gap: 20 }}>
+            <div style={{ borderRadius: 24, padding: 28, background: "#E8F1FF", color: "#001B99", display: "flex", flexDirection: "column", gap: 20 }}>
               <div style={{ display: "flex", alignItems: "center", gap: 10, background: "#FFFFFF", borderRadius: 999, padding: "6px 6px 6px 18px" }}>
                 <span className="mono" style={{ flex: 1, minWidth: 0, fontSize: 14, whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>verse.ctruh.com/s/your-scene</span>
                 <CopyButton text="verse.ctruh.com/s/your-scene" label="Copy link" className="cta cta-cobalt cta-sm" />
               </div>
               <div style={{ display: "flex", gap: 16, alignItems: "flex-end", justifyContent: "center", padding: "6px 0" }}>
                 <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-                  <div className="force-dark" style={{ width: 220, maxWidth: "52vw", height: 136, borderRadius: "12px 12px 0 0", background: "#001B99", border: "6px solid #001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}><Cube size="xs" /></div>
+                  <div className="force-dark" style={{ width: 220, maxWidth: "52vw", height: 136, borderRadius: "12px 12px 0 0", background: "#070B1F", border: "6px solid #070B1F", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}><Cube size="xs" /></div>
                   <div style={{ width: 260, maxWidth: "60vw", height: 10, borderRadius: "0 0 10px 10px", background: "#001B99" }} />
                 </div>
-                <div className="force-dark" style={{ width: 76, height: 146, borderRadius: 16, background: "#001B99", border: "5px solid #001B99", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}><Cube size="xs" style={{ transform: "scale(.6)" }} /></div>
+                <div className="force-dark" style={{ width: 76, height: 146, borderRadius: 16, background: "#070B1F", border: "5px solid #070B1F", display: "flex", alignItems: "center", justifyContent: "center", overflow: "hidden" }}><Cube size="xs" style={{ transform: "scale(.6)" }} /></div>
               </div>
               <div className="mono" style={{ display: "flex", flexWrap: "wrap", gap: 8, justifyContent: "center", fontSize: 12, letterSpacing: "0.06em" }}>
                 {["PRIVATE", "EDITABLE", "EMBEDDABLE"].map((t) => <span key={t} style={{ padding: "7px 12px", borderRadius: 999, border: "1px solid rgba(0,27,153,0.35)" }}>✓ {t}</span>)}

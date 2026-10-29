@@ -9,7 +9,7 @@ import { Tabs } from "@/components/ui/Tabs";
 import { DAILY, SCENES, SESSIONS, fmt, hrs } from "@/lib/api/mock";
 import { ROUTES } from "@/lib/links";
 
-const DEVICES = [["Phone", 58, "#0077FF"], ["Desktop", 34, "#FFFFFF"], ["Headset", 8, "#FFFFFF"]] as const;
+const DEVICES = [["Phone", 58, "#0077FF"], ["Desktop", 34, "#E8F1FF"], ["Headset", 8, "#FFFFFF"]] as const;
 
 export function AnalyticsView({ initial }: { initial?: string }) {
   const router = useRouter();

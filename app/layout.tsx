@@ -18,10 +18,10 @@ export const metadata: Metadata = {
     "Any 3D world, as a link. Verse Engine by Ctruh turns any 3D file, editor project or floor plan into one link that opens on a laptop, a phone or a headset.",
 };
 
-export const viewport: Viewport = { themeColor: "#001B99", width: "device-width", initialScale: 1 };
+export const viewport: Viewport = { themeColor: "#070B1F", width: "device-width", initialScale: 1 };
 
-// Runs before paint: stored choice → prefers-color-scheme → light.
-const themeScript = `(function(){try{var t=localStorage.getItem('verse-theme');if(!t){t=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','light')}})()`;
+// Runs before paint: stored choice → prefers-color-scheme → dark.
+const themeScript = `(function(){try{var t=localStorage.getItem('verse-theme');if(!t){t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark'}document.documentElement.setAttribute('data-theme',t)}catch(e){document.documentElement.setAttribute('data-theme','dark')}})()`;
 
 // Marks the landing preloader as already seen (this session, or reduced motion) before first paint.
 const plScript = `try{if(sessionStorage.getItem('verse-pl')||matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.dataset.pl='seen'}catch(e){}`;
@@ -30,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html
       lang="en"
-      data-theme="light"
+      data-theme="dark"
       suppressHydrationWarning
     >
       <body>

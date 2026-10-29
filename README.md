@@ -23,8 +23,8 @@ Metropolis (brand typeface, via `@fontsource/metropolis`).
 - `components/pages/*`, `components/studio/*` — page views.
 
 ## Themes
-White is the default; the Deep Blue theme is `data-theme="dark"` on `<html>` (toggle in the footer / Studio sidebar, persisted, respects `prefers-color-scheme`).
-Palette per the Ctruh brand guidelines: Primary Blue `#0077FF`, Deep Blue `#001B99`, White `#FFFFFF`, plus alpha and one 60% tint (`#66ADFF`) for accent text on Deep Blue.
+Dark is the default; light via `data-theme="light"` on `<html>` (toggle in the footer / Studio sidebar, persisted, respects `prefers-color-scheme`).
+Palette: `#0077FF`, `#001B99`, `#FFFFFF`, `#E8F1FF`, `#070B1F` (+ alpha), from the design hand-off. Typeface: Metropolis.
 `.force-dark` pins always-dark surfaces (film, device frames, viewer panes); `.band` is a saturated cobalt band.
 
 ## Placeholders still open (also marked `[PLACEHOLDER]` in the UI/code)

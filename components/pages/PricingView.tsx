@@ -40,7 +40,7 @@ export function PricingView() {
       </section>
 
       <section id="enterprise" className="band" aria-labelledby="ent" style={{ position: "relative", padding: "100px 0", overflow: "hidden", scrollMarginTop: 70 }}>
-        <div aria-hidden="true" style={{ position: "absolute", right: -200, top: -200, width: 720, height: 720, borderRadius: "50%", border: "1px solid rgba(255,255,255,0.14)" }} />
+        <div aria-hidden="true" style={{ position: "absolute", right: -200, top: -200, width: 720, height: 720, borderRadius: "50%", border: "1px solid rgba(232,241,255,0.14)" }} />
         <div className="wrap" style={{ position: "relative", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 400px), 1fr))", gap: 56, alignItems: "center" }}>
           <div>
             <span className="mono eyebrow">ENTERPRISE</span>
@@ -49,7 +49,7 @@ export function PricingView() {
           </div>
           <div style={{ minWidth: 0 }}>
             {!sent ? (
-              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 16, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 28, padding: 28 }}>
+              <form onSubmit={(e) => { e.preventDefault(); setSent(true); }} style={{ display: "flex", flexDirection: "column", gap: 16, background: "rgba(7,11,31,0.55)", border: "1px solid rgba(232,241,255,0.2)", borderRadius: 28, padding: 28 }}>
                 <label className="fld" htmlFor="e1">NAME<input id="e1" className="inp" required autoComplete="name" /></label>
                 <label className="fld" htmlFor="e2">WORK EMAIL<input id="e2" className="inp" type="email" required autoComplete="email" /></label>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: 16 }}>
@@ -60,7 +60,7 @@ export function PricingView() {
                 <button className="cta cta-white cta-lg" type="submit">Request a call back</button>
               </form>
             ) : (
-              <div className="fadeup" role="status" style={{ display: "flex", flexDirection: "column", gap: 12, background: "rgba(255,255,255,0.12)", border: "1px solid rgba(255,255,255,0.3)", borderRadius: 28, padding: 36 }}>
+              <div className="fadeup" role="status" style={{ display: "flex", flexDirection: "column", gap: 12, background: "rgba(7,11,31,0.55)", border: "1px solid rgba(232,241,255,0.2)", borderRadius: 28, padding: 36 }}>
                 <span className="mono eyebrow">REQUEST RECEIVED</span><span className="wide" style={{ fontSize: 34, fontWeight: 600 }}>WE’LL CALL YOU SHORTLY.</span><span style={{ color: "var(--body)" }}>Expect a call within 30 minutes during business hours (IST).</span>
               </div>
             )}
